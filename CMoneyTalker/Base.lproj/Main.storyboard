@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CMoneyTalker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dct-sA-aeR">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">《再別康橋》
+
+輕輕的我走了
+
+正如我輕輕的來
+
+我輕輕的招手
+
+作別西天的雲彩
+
+那河畔的金柳
+
+是夕陽中的新娘
+
+波光里的艷影
+
+在我的心頭蕩漾
+
+軟泥上的青荇
+
+油油的在水底招搖
+
+在康河的柔波里
+
+我甘心做一條水草
+
+那樹蔭下的一潭
+
+不是清泉，是天上虹
+
+揉碎在浮藻間
+
+沉澱著彩虹似的夢
+
+尋夢？撐一支長篙
+
+向青草更青處漫溯
+
+滿載一船星輝
+
+在星輝斑斕里放歌
+
+但我不能放歌
+
+悄悄是別離的笙簫
+
+夏蟲也為我沉默
+
+沉默是今晚的康橋
+
+悄悄的我走了
+
+正如我悄悄的來
+
+我揮一揮衣袖
+
+不帶走一片雲彩</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-ua-EMR">
+                                <rect key="frame" x="20" y="64.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MM3-bR-rXI"/>
+                                    <constraint firstAttribute="width" constant="50" id="faq-LZ-vQw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="play.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playPauseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkl-GF-ZCh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM3-DD-8x9">
+                                <rect key="frame" x="90" y="64.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3TN-UV-bpu"/>
+                                    <constraint firstAttribute="width" constant="50" id="yLX-9l-JkC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="stop.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="NextStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47O-mp-nFU"/>
+                                    <action selector="stopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Igt-qJ-OQq"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-0w-2X3">
+                                <rect key="frame" x="160" y="82" width="94" height="32"/>
+                                <connections>
+                                    <action selector="onRateStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="kmP-Kt-UtY"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="速率：0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P09-Co-1qk">
+                                <rect key="frame" x="169" y="51" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語調：1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls2-4g-WBe">
+                                <rect key="frame" x="285.5" y="51" width="73.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7lj-gz-Wov">
+                                <rect key="frame" x="274" y="82" width="94" height="32"/>
+                                <connections>
+                                    <action selector="onPitchStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tsI-6O-J5y"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dct-sA-aeR" secondAttribute="bottom" id="5TY-uv-7d5"/>
+                            <constraint firstItem="FCg-ua-EMR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7aA-QK-CAG"/>
+                            <constraint firstItem="Lcf-0w-2X3" firstAttribute="top" secondItem="P09-Co-1qk" secondAttribute="bottom" constant="10" id="7aA-eJ-RLf"/>
+                            <constraint firstItem="P09-Co-1qk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="885-Z2-amc"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ar4-TJ-QJq"/>
+                            <constraint firstItem="NM3-DD-8x9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IS1-wc-zxz"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="top" secondItem="FCg-ua-EMR" secondAttribute="bottom" id="MOR-Gb-mdN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ls2-4g-WBe" secondAttribute="trailing" constant="55" id="OX4-iK-R5i"/>
+                            <constraint firstItem="7lj-gz-Wov" firstAttribute="top" secondItem="ls2-4g-WBe" secondAttribute="bottom" constant="10" id="P4V-D2-jY9"/>
+                            <constraint firstItem="NM3-DD-8x9" firstAttribute="leading" secondItem="FCg-ua-EMR" secondAttribute="trailing" constant="20" id="S9X-BB-0bc"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Top-9L-HHg"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="top" secondItem="NM3-DD-8x9" secondAttribute="bottom" id="aMT-Vy-yR2"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="top" secondItem="Lcf-0w-2X3" secondAttribute="bottom" id="dPp-JT-VbT"/>
+                            <constraint firstItem="dct-sA-aeR" firstAttribute="top" secondItem="7lj-gz-Wov" secondAttribute="bottom" id="os3-Ew-JsQ"/>
+                            <constraint firstItem="FCg-ua-EMR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pIo-Ki-hdk"/>
+                            <constraint firstItem="7lj-gz-Wov" firstAttribute="leading" secondItem="Lcf-0w-2X3" secondAttribute="trailing" constant="20" id="sQ8-eO-WIJ"/>
+                            <constraint firstItem="Lcf-0w-2X3" firstAttribute="leading" secondItem="NM3-DD-8x9" secondAttribute="trailing" constant="20" id="xga-Pb-uIo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pitchLabel" destination="ls2-4g-WBe" id="Hf7-5M-eWa"/>
+                        <outlet property="pitchStepper" destination="7lj-gz-Wov" id="Y4a-4P-WoA"/>
+                        <outlet property="playPauseButton" destination="FCg-ua-EMR" id="muK-VO-Bcj"/>
+                        <outlet property="poetryTextView" destination="dct-sA-aeR" id="BG9-vq-fdZ"/>
+                        <outlet property="rateLabel" destination="P09-Co-1qk" id="Yd4-kG-dQz"/>
+                        <outlet property="rateStepper" destination="Lcf-0w-2X3" id="mKV-RQ-6lU"/>
+                        <outlet property="stopButton" destination="NM3-DD-8x9" id="SCj-J8-XZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="stop.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
